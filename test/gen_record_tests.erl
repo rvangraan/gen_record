@@ -5,28 +5,28 @@
 %%--------------------------------------------------------------------------------------------------
 
 new0_test() ->
-    ?assertEqual( date:new(), {date, 1981, 01, 01}).
+    ?assertEqual( tdate:new(), {tdate, 1981, 01, 01}).
 
 %%--------------------------------------------------------------------------------------------------
 
 get_test_() ->
-    Date = date:new(),
+    Date = tdate:new(),
 
     [
-        ?_assertEqual( date:year(Date),  1981),
-        ?_assertEqual( date:month(Date), 01),
-        ?_assertEqual( date:day(Date),   01)
+        ?_assertEqual( tdate:year(Date),  1981),
+        ?_assertEqual( tdate:month(Date), 01),
+        ?_assertEqual( tdate:day(Date),   01)
     ].
 
 %%--------------------------------------------------------------------------------------------------
 
 set_test_() ->
-    Date = date:new(),
+    Date = tdate:new(),
 
     [
-        ?_assertEqual( date:year(Date, 2000),  {date, 2000, 01, 01}),
-        ?_assertEqual( date:month(Date, 2000), {date, 1981, 2000, 01}),
-        ?_assertEqual( date:day(Date, 2000),   {date, 1981, 01, 2000})
+        ?_assertEqual( tdate:year(Date, 2000),  {tdate, 2000, 01, 01}),
+        ?_assertEqual( tdate:month(Date, 2000), {tdate, 1981, 2000, 01}),
+        ?_assertEqual( tdate:day(Date, 2000),   {tdate, 1981, 01, 2000})
     ].
 
 %%--------------------------------------------------------------------------------------------------
