@@ -1,0 +1,12 @@
+{application, gen_record,
+ [
+  {description, ""},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { gen_record_app, []}},
+  {env, []}
+ ]}.
